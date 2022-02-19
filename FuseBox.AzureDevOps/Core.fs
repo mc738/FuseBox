@@ -1,6 +1,7 @@
 ﻿namespace FuseBox.AzureDevOps
 
 open System
+open System.Text.Json.Serialization
 open System.Threading.Tasks
 open Microsoft.TeamFoundation.Core.WebApi
 open Microsoft.TeamFoundation.SourceControl.WebApi
@@ -9,11 +10,12 @@ open Microsoft.VisualStudio.Services.Common
 [<AutoOpen>]
 module Common =
 
+    [<CLIMutable>]
     type Configuration =
-        { Url: string
-          AccessToken: string
-          Project: string
-          RepositoryId: string }
+        { [<JsonPropertyName("url")>] Url: string
+          [<JsonPropertyName("accessToken")>] AccessToken: string
+          [<JsonPropertyName("project")>] Project: string
+          [<JsonPropertyName("repositoryId")>] RepositoryId: string }
 
 [<RequireQualifiedAccess>]
 module PullRequests =
@@ -122,8 +124,3 @@ module PullRequests =
         }
         |> runTask
 
-
-
-
-module Say =
-    let hello name = printfn "Hello %s" name

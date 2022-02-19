@@ -200,11 +200,12 @@ module V1 =
                 client
                 assignedTask
 
+    (*
     [<AutoOpen>]
     module Extensions =
         open Core
         open FuseBox.StateManagement
-        open FuseBox.StateManagement.Persistence
+        open FuseBox.Asana.StateManagement.Persistence
         open Domain
         
         type StateManager with
@@ -247,4 +248,4 @@ module V1 =
         
         
         let i = ()
-        
+    *)  

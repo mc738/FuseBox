@@ -7,9 +7,13 @@
 
     <ItemGroup>
         <Compile Include="Library.fs" />
-        <Compile Include="StateManagement\Persistence.fs" />
-        <Compile Include="StateManagement\StateManager.fs" />
+        <Compile Include="DataStore\Persistence.fs" />
+        <Compile Include="DataStore\StateManager.fs" />
+        <Compile Include="DataStore\Domain.fs" />
+        <Compile Include="DataStore\DataStore.fs" />
         <Compile Include="Formatting.fs" />
+        <Compile Include="Workflows.fs" />
+        <Compile Include="Projects.fs" />
     </ItemGroup>
 
     <ItemGroup>

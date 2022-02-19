@@ -7,7 +7,8 @@
 
     <ItemGroup>
         <Compile Include="Library.fs" />
-        <Folder Include="StateManagement" />
+        <Compile Include="DataStore\Persistence.fs" />
+        <Compile Include="DataStore\Initialization.fs" />
         <Compile Include="Core.fs" />
     </ItemGroup>
 

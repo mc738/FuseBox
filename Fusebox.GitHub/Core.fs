@@ -1,4 +1,4 @@
-﻿namespace Fusebox.GitHub
+﻿namespace FuseBox.GitHub
 
 open System
 open Octokit
@@ -17,10 +17,12 @@ module Issues =
     let getForRepo (repoName: string) (client: GitHubClient) =
         task { return! client.Issue.GetAllForRepository("mc738", repoName) }
 
+
+(*
 [<AutoOpen>]
 module Extensions =
     open FuseBox.StateManagement
-    open FuseBox.StateManagement.Persistence
+    open FuseBox.GitHub.StateManagement.Persistence
 
     type StateManager with
 
@@ -43,3 +45,4 @@ module Extensions =
                        Serial = 1L
                        IsOpen = true }: Parameters.NewGithubIssue)
                     |> Operations.insertGithubIssue t)
+*)

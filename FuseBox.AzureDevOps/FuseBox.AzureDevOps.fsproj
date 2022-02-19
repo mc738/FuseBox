@@ -6,7 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Library.fs" />
+        <Compile Include="StateManagement\Persistence.fs" />
+        <Compile Include="Core.fs" />
     </ItemGroup>
 
     <ItemGroup>
